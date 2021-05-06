@@ -19,3 +19,12 @@ conn.connect(function(err) {
 });
 
 // run with node demoConnection.js
+
+conn.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+    conn.query(sql, function (err, result) {
+        if (err) throw err;
+        console.log("Result: " + result);
+    });
+});
